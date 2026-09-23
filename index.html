@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mi biblioteca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="body">
     <header class="header">
@@ -34,18 +37,33 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Agregar</button>
 
-                </form>
-            </section>
             <section class="filter">
-                <div></div>
-            </section>
-            <section>
-                <h2>Catalogo</h2>
-                <ul></ul>
+                <h3>Filtrar libros</h3>
+                <div class="filter-group">
+                    <label for="buscar">Buscar</label>
+                    <input type="text" id="buscar" placeholder="Buscar por título o autor">
+                </div>
+                <div class="filter-group">
+                    <label for="filtro-genero">Género</label>
+                    <select id="filtro-genero">
+                        <option value="todos">Todos</option>
+                    </select>
+                </div>
+                <div class="filter-group filter-group-inline">
+                    <input type="checkbox" id="mostrar-favoritos">
+                    <label for="mostrar-favoritos">Mostrar solo favoritos</label>
+                </div>
+                <p class="book-count">Cantidad de libros: <span id="book-count">0</span></p>
             </section>
         </div>
+        <section class="books">
+            <h2>Catálogo</h2>
+            <ul id="book-list">
+                <!-- Los libros se agregarán aquí dinámicamente -->
+            </ul>
+            <p class="empty-state" id="empty-state" hidden>No se encontraron libros con esos filtros.</p>
+        </section>
     </main>
-    <footer></footer>
     <script src="js/data.js"></script>
     <script src="js/render.js"></script>
     <script src="js/app.js"></script>   
