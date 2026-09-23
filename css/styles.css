@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+:root{
+    --color-primary: #479900;
+    --color-primary-dark: #316900;
+    --color-text: #ebd5ab;
+    --color-muted: #7a6a58;
+    --color-success: #2e7d32;
+    --color-danger: #b3261e;
+    --color-accent: #c98a12;
+    --bg-page: #fbf3e5;
+    --bg-card: #ffffff;
+    --radius: 8px;
+    --shadow: 0 2px 8px rgba(97, 56, 2, 0.12);
+}
